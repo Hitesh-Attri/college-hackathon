@@ -60,14 +60,15 @@ router.route("/").get(function (req, res) {
                     
                     info.push(user)
                     fs.writeFile(dir + "/data.json", JSON.stringify(info), function (err) {
-                        sendEmail(user.email, user.token, 2, (err,data)=>{
-                            res.render("signup.ejs", { phrase: 'Get your self verified, check mail and login' })
-                            return;
-                        })
-                        sendEmail(req, mailToken, (info)=>{
+                        // sendEmail(user.email, user.token, 2, (err,data)=>{
+                        //     res.render("signup.ejs", { phrase: 'Get your self verified, check mail and login' })
+                        //     return;
+                        // })
+                        sendEmail(req, user.token, (info)=>{
                             console.log("this is sendEmail callback")
                             // console.log(info)
-                            res.render('root', { loggedOut:-1, msg:"Please verify your email! then login"});
+                            // res.render('root', { loggedOut:-1, msg:"Please verify your email! then login"});
+                            res.render("signup.ejs", { phrase: 'Get your self verified, check mail and login' })
                         })
                     })
                     

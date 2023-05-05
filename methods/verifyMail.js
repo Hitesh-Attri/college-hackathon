@@ -21,7 +21,7 @@ const verifyMail = (req,res)=>{
                 flag = true;
 
                 theFile[i].isVerified = true;
-                req.session.is_logged_in = true;
+                req.session.login = true;
                 req.session.email = theFile[i].email;
                 req.session.username = theFile.username;
 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion App</title>
+    <link rel="stylesheet" href="/style/discussionStyle.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="main-div">
+        <div id="header">
+            <h2>Discussion Portal</h2>
+            <div id="subDivHeader">
+                <h2 class="btn btn-outline-info" id="usernameH"><%= username %></h2>
+                <a href="/compiler" id="compilerBtn" class="btn btn-primary btn-sm m-2">Compiler</a>
+                <a href="/logout" id="logoutBtn" class="btn btn-secondary btn-sm m-2">Logout</a>
+            </div>
+        </div>
+        
+        <div id="main2-div">
+            <div id="left-pane">
+                <div id="left-pane-header">
+                    <button id="new-ques-form" class="left-pane-inputs">New Question form</button>
+                    <input type="text" class="left-pane-inputs" id ="search-questions" placeholder="search questions...">
+                    <button id = "all-Fav" class="left-pane-inputs" >&#9734;</button>
+                </div>
+
+                <div id="show-here">
+
+                    <!-- <div class="lp-quesData-container" id="lp-quesData-container-0">   div1
+                        <div class="ques-data" id="ques-data-0">   div2 
+                            <h3 class="quesH3" id="quesH3-0">ques</h3>
+                            <P class="quesP" id="quesP-0">answer</P>
+                            <p class="time" id="time-0">just now</p>
+                        </div>
+                        <div class="fav-vote-container">  div3 
+                            <div class="favBtn-voteCnt">  div4 
+                                <button class="fav-btn" id="fav-btn-0">&#9734;</button>
+                                
+                            </div>
+                            <div class="vote-div">  div5 
+                                <button class="up-vote" id="up-vote-0">&uarr;</button>
+                                <p class="vote-cnt" id="vote-cnt-0">0</p>
+                                <button class="down-vote" id="down-vote-0">&darr;</button>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+
+            <div id="right-pane">
+                <h1>Welcome to Discussion Portal</h1>
+                <h4>Enter a subject and question to get started</h4>
+
+                <div id="sub-ques-input">
+                    <input type="text" id="subject" placeholder="Subject">
+                    <textarea name="question" id="question" placeholder="Question"></textarea>
+                    <button id="submit">Submit</button>
+                </div>
+            </div>
+            <div id="right-pane2">
+                <div id="ques-resolvebtn-div">
+                    <p>Question</p>
+                    <div id="sub-header" class="sub-header">
+                        <div id="ques-header" class="respnse-data"> 
+                            <h3 id="right-pane2-h3">test heading</h3>
+                            <p id="right-pane2-p">test question</p>
+                        </div>
+                        <p id = "vote-cnt" class="vote-cnt">hj</p>
+                        <div id="vote-div" class="vote-div">
+                            <button id="up-vote" class="up-vote">&uarr;</button>
+                            <button id="down-vote" class="down-vote">&darr;</button>
+                        </div>
+                    </div>
+                    <button id="resolveBtn">Resolve</button>
+                </div>
+                <div id="rp2-input-div" class="rp2-input-div">
+                    <p style="padding: 0.3rem;">Response</p>
+                    <div id="response-list-parent">
+                        <!-- <div class="response-list-div">
+                            <h3 id="right-pane2-h3">test heading</h3>
+                            <p id="right-pane2-p">test question</p>
+                        </div> -->
+                    </div>
+                    <div id="add-Response-Div">
+                        <p>Add Response</p>
+                        <input type="text" id="respone-enter-name" placeholder="Enter name">
+                        <textarea id="responeTxt" name="responeTxt" placeholder="Enter comment"></textarea>
+                        <button id="responseSubmitBtn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/script/discussionScript.js"></script>
+</body>
+</html>

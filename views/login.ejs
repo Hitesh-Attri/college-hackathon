@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            Discussion Portal
+        </title>
+        <link rel="stylesheet" href="/login/style.css" type="text/css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        
+    </head>
+    <body class="gradient-custom-2">
+        <div class="container">
+        <div class="red"><%=phrase%></div>
+            <form name="myForm" action="/login" method="post" onsubmit="return validateForm()">
+                    <p>Hello, Login to your Account!</p>
+                    
+                    <input type="text" id="name" name="name" placeholder="UserName" required>
+                    <br>
+                    <br>
+                    <input type="password" id="password" name="password" placeholder="PassWord" required>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn bg-info btn-info" id="login">Login</button>
+            </form>
+            <p class="textt">
+                Don't have an account?
+            </p>
+            <a href="/signup" class="b">Sign_up</a>
+        </div> 
+    </body>
+    <script src="/login/script.js"></script>
+</html>
